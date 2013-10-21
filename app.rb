@@ -45,6 +45,13 @@ class MessageApp < Sinatra::Base
     "Database migrated! All tables reset."
   end
 
+  post '/' do
+    message = Message.new
+    message.attributes = { :from => "from test", :content => "content test" , :created_at => Time.now }
+    message.save
+  end
+
+
 end
 
 DataMapper.finalize
