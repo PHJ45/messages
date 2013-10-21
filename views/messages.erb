@@ -10,6 +10,8 @@
 
     <div class="header">My Messages</div>
 
+
+
     <div id="message-stream">
       <%
         # for each message in @messages
@@ -27,6 +29,16 @@
       </div>
       
       <%end%>
+
+      <form action="/" method="post">
+        <input type="text" name="from">
+        <input type="text" name="content">
+        <input type="submit">
+      </form>
+
+<!--     <div class="field">
+      <input type="text" name = "From">
+    </div> -->
 
     </div>
   </body>
