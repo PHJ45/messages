@@ -14,17 +14,17 @@
         # render the template below
         # filling the content from
         # the message
+        Message.all.each do |message|
       %>
 
       <div class="message">
         <a href="" class="close"></a>
-        <div class="from">
-        </div>
-        <div class="content">
-        </div>
-        <div class="time">
-        </div>
+        <div class="from"> <%= message.from %> </div>
+        <div class="content"> <%= message.content %> </div> 
+        <div class="time"> <%= message.created_at %></div>
       </div>
+      
+      <%end%>
 
     </div>
   </body>

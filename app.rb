@@ -22,6 +22,7 @@ require 'sinatra'
 require "sinatra/reloader"
 require 'data_mapper'
 require 'sqlite3'
+require 'pry'
 
 require_relative 'models/message'
 
@@ -47,7 +48,7 @@ class MessageApp < Sinatra::Base
 
   post '/' do
     message = Message.new
-    message.attributes = { :from => "from test", :content => "content test" , :created_at => Time.now }
+    message.attributes = params
     message.save
   end
 
