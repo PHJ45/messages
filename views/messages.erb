@@ -3,6 +3,8 @@
     <meta charset="utf-8" />
     <title></title>
     <link href="style.css" rel="stylesheet" />
+    <script src="jquery-1.7.2.js"></script>
+    <script src="delete.js"></script>
   </head>
   <body>
 
@@ -20,10 +22,12 @@
       %>
 
       <div class="message">
-        <a href="" class="close"></a>
+
+        <a href="#" class="close"></a>
         <div class="from"> From: <%= message.from %> </div>
-        <div class="content"> Message <%= message.content %> </div> 
+        <div class="content"> Message: <%= message.content %> </div> 
         <div class="time"> <%= message.created_at %></div>
+
       </div>
       
       <%end%>
