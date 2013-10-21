@@ -8,11 +8,7 @@
 
     <div class="header">My Messages</div>
 
-    <form action="/" method="post">
-      <input type="text" name="from">
-      <input type="text" name="content">
-      <input type="submit">
-    </form>
+
 
     <div id="message-stream">
       <%
@@ -32,7 +28,11 @@
       
       <%end%>
 
-
+      <form action="/" method="post">
+        <input type="text" name="from">
+        <input type="text" name="content">
+        <input type="submit">
+      </form>
 
 <!--     <div class="field">
       <input type="text" name = "From">
