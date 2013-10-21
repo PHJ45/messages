@@ -46,6 +46,10 @@ class MessageApp < Sinatra::Base
     "Database migrated! All tables reset."
   end
 
+  # get '/messages' do
+  #   erb :messages
+  # end
+
   post '/' do
     message = Message.new
     message.attributes = params
