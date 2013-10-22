@@ -54,6 +54,7 @@ class MessageApp < Sinatra::Base
     message = Message.new
     message.attributes = params
     message.save
+    redirect '/'
   end
 
 
